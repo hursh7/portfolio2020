@@ -1,1 +1,1 @@
-# portfolio2020
+# portfolio2020 리닝 
