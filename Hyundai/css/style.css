@@ -461,3 +461,38 @@
     color: #fff;
     background-color: #977262;
 }
+
+.footer {
+    width: 100%;
+    background-color: #7a594a;
+}
+
+.footer .inner {
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.footer .inner:after {
+   display: block;
+   clear: both;
+   content: '';
+}
+
+.footer .inner .left {
+    float: left;
+    margin-left: 49px;
+}
+
+.footer .inner .left .copyright {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    font-weight: 100;
+    margin-left: 19px;
+    color : rgba(255, 255, 255, 0.5)    
+}
+
+.footer .inner .right  {
+    float: right;
+    margin-right: 25px;
+}
