@@ -64,6 +64,15 @@ ul,li,ol {list-style: none;}
 /* 제목 태그 초기화 */
 h1,h2,h3,h4,h5,h6 {font-size: 13px; font-weight: normal;}
 
+h2 {text-align: center; font-size: 45px;padding-top: 80px;position: relative;}
+h3{text-align: center; font-size: 16px;margin-bottom: 90px;color:#a3a1a1; }
+
+.line {
+    margin: 5px auto 13px;
+    background-color: #F16B6F;
+    width: 30px;
+    height: 2px;
+}
 /* 버튼 초기화 */
 button {border: 0;}
 
