@@ -16,11 +16,11 @@
             <div class="gnb_wrap">
                 <div class="gnb">
                     <ul>
-                        <li><a href="#home" class="on">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skill">Skill</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home" class="active" onclick="movePage(home);">Home</a></li>
+                        <li><a href="#about" onclick="movePage(about);">About</a></li>
+                        <li><a href="#skill" onclick="movePage(skill);">Skill</a></li>
+                        <li><a href="#portfolio" onclick="movePage(portfolio);">Portfolio</a></li>
+                        <li><a href="#contact" onclick="movePage(contact);">Contact</a></li>
                     </ul>
                 </div>
                 <div class="gnb_mobile">
@@ -162,7 +162,7 @@
             <h3>"저의 프로젝트 및 포트폴리오 작품들을 소개합니다."</h3>
             <div class="portfolio_wrap clearfix">
                 <div class="portfolio_tab">
-                    <a href="#" class="on">All</a>
+                    <a href="#" class="active">All</a>
                     <a href="#">Web</a>
                     <a href="#">Responsive</a>
                     <a href="#">App</a>
@@ -170,25 +170,123 @@
                 <div class="content_container clearfix">
                     <div class="content">
                         <div class="item">
-                            <img src="img/test.JPG" alt="이미지">
+                            <img class="item_img" src="img/pf_web01.png" alt="이미지">
+                            <div class="item_cover">
+                                <div class="item_txt">
+                                    <h4>Zetton</h4>
+                                    <p>#Responsive #프로젝트 #퍼블리싱</p>
+                                </div>
+                            </div>
                         </div>
-                        <p class="content_tit">Portfolio</p>
+                        <p class="content_tit">Zetton</p>
                     </div>
                     <div class="content">
-                        
+                        <div class="item">
+                            <img class="item_img" src="img/pf_mob01.png" alt="이미지">
+                            <div class="item_cover">
+                                <div class="item_txt">
+                                    <h4>모바일명함 SHIFT</h4>
+                                    <p>#Mobile #App UI/UX 디자인</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="content_tit">모바일명함 SHIFT</p>
                     </div>
                     <div class="content">
-                        
+                        <div class="item">
+                            <img class="item_img" src="img/pf_web02.png" alt="이미지">
+                            <div class="item_cover">
+                                <div class="item_txt">
+                                    <h4>SHIFT Web</h4>
+                                    <p>#Responsive #모바일명함 SHIFT 홈페이지 #유지보수</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="content_tit">SHIFT Web</p>
                     </div>
                     <div class="content">
-                        
+                        <div class="item">
+                            <img class="item_img" src="img/pf_web03.png" alt="이미지">
+                            <div class="item_cover">
+                                <div class="item_txt">
+                                    <h4>JEJECoMMS Co.</h4>
+                                    <p>#Responsive #(주)제제컴즈 홈페이지 #유지보수</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="content_tit">JEJECoMMS Co.</p>
                     </div>
                     <div class="content">
-                        
+                        <div class="item">
+                            <img class="item_img" src="img/pf_web04.png" alt="이미지">
+                            <div class="item_cover">
+                                <div class="item_txt">
+                                    <h4>One-real estimate</h4>
+                                    <p>#Responsive #프로젝트 #퍼블리싱</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="content_tit">원공인중개사</p>
+                    </div>
+                    <div class="content">
+                        <div class="item">
+                            <img class="item_img" src="img/pf_web05.png" alt="이미지">
+                            <div class="item_cover">
+                                <div class="item_txt">
+                                    <h4>MegaBox</h4>
+                                    <p>#Responsive #카피 페이지 #퍼블리싱</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="content_tit">메가박스</p>
+                    </div>
+                    <div class="content">
+                        <div class="item">
+                            <img class="item_img" src="img/pf_web06.png" alt="이미지">
+                            <div class="item_cover">
+                                <div class="item_txt">
+                                    <h4>Gabia</h4>
+                                    <p>#Common Web #카피 페이지 #퍼블리싱</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="content_tit">가비아</p>
+                    </div>
+                    <div class="content">
+                        <div class="item">
+                            <img class="item_img" src="img/pf_web05.png" alt="이미지">
+                            <div class="item_cover">
+                                <div class="item_txt">
+                                    <h4>One-real estimate</h4>
+                                    <p>#Responsive #프로젝트 #퍼블리싱</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="content_tit">원공인중개사</p>
                     </div>
                 </div>
             </div>
          </section>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".gnb ul li a").click(function(e){
+                e.preventDefault();
+            //     var direction = $(this).attr("href"); 
+            //     --> a 태그 href 값
+            //     var position = $(direction).offset(); 
+            //     --> 해당 태그의 좌표값을 구한다.
+            //     $("html").stop().animate({scrollTop:position.top},500); 
+            //     --> stop 중복 애니메이션 방지
+            });
+        });
+        
+        function movePage (pageName) {
+            var position = $(pageName).offset(); // 해당 태그의 좌표값을 구한다.
+            // console.log(pageName);
+            $("html").stop().animate({scrollTop:position.top},500); // stop 중복 애니메이션 방지          
+        }
+    </script>
 </body>
 </html>
