@@ -180,7 +180,7 @@
                     </div>
                 </div>
                 <div class="content_container clearfix">
-                    <div class="content">
+                    <div class="content" onclick="pop_open();">
                         <div class="item">
                             <img class="item_img" src="img/pf_web01.png" alt="이미지">
                             <div class="item_cover">
@@ -298,6 +298,16 @@
             var position = $(pageName).offset(); // 해당 태그의 좌표값을 구한다.
             // console.log(pageName);
             $("html").stop().animate({scrollTop:position.top},500); // stop 중복 애니메이션 방지          
+        }
+        
+        function pop_close () {
+            $(".popup_wrap").fadeOut();
+            $("body").css("overflow-Y","auto");
+        }
+
+        function pop_open () {
+            $(".popup_wrap").fadeIn();
+            $("body").css("overflow-Y","hidden");
         }
     </script>
 </body>
