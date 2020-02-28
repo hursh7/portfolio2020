@@ -187,6 +187,7 @@
 #skill .skill_wrap {
     color: #FFFFF3;
     /* height: 100%; */
+    height: 100vh;
 }
 
 #skill .skill_wrap .guage_wrap {
@@ -194,22 +195,33 @@
     width: 50%;
     /* background-color: skyblue; */
     padding: 0 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 60px);
 }
 
 #skill > .skill_wrap .guage_wrap > h2 {
     /* color: #FFFFF3; */
     text-align: left;
+    align-self: flex-start;
 }
 
 #skill > .skill_wrap .guage_wrap > .line {
     display: inline-block;
+    align-self: flex-start;
+    margin: 5px 0 13px;
 }
 
 #skill > .skill_wrap > .guage_wrap > h3 {
     color: #FFFFF3;
     margin-bottom: 50px;
     text-align: left;
+    align-self: flex-start;
 }
+
+#skill > .skill_wrap > .guage_wrap > ul {width: 100%;}
 
 #skill > .skill_wrap > .guage_wrap > ul > li {
     margin-bottom: 40px;
