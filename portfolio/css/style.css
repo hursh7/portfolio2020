@@ -119,8 +119,8 @@
 #about {
     position: relative;
     width: 100%;
-    height: 100vh;
-    /* height: 100%; */
+    /* height: 100vh; */
+    height: 100%;
     margin: 0 auto;
 }
 
@@ -178,14 +178,15 @@
 #skill {
     position: relative;
     width: 100%;
-    height: 100vh;
-    /* height: 100%; */
+    /* height: 100vh; */
+    height: 100%;
     margin: 0 auto;
     background-color: #566270;
 }
 
 #skill .skill_wrap {
     color: #FFFFF3;
+    /* height: 100%; */
 }
 
 #skill .skill_wrap .guage_wrap {
@@ -272,7 +273,7 @@
     background: url(../img/bg_skill.jpg) center center no-repeat;
     /* background-attachment: fixed; */
     background-size: cover;
-    height: 100vh;
+    height: 100%;
 }
 
 #skill .skill_wrap .skill_img:before {
@@ -282,19 +283,82 @@
     width: 100%;
     height: 100vh;
     background-color: rgba(0,0,0,0.4);
+    z-index: 5;
 }
 
 #portfolio {
     position: relative;
     width: 100%;
-    height: 100vh;
-    /* height: 100%; */
+    /* height: 100vh; */
+    height: 100%;
     margin: 0 auto;
 }
 
 #portfolio > h3{
     margin-bottom: 55px;
 }
+
+/* 포트폴리오_팝업 */
+
+#portfolio .portfolio_wrap .popup_wrap {
+    display: none;
+    position: fixed;
+	top: 0; right: 0; left: 0; bottom: 0;
+	background-color: rgba(0,0,0,.7);
+    z-index: 10;
+    margin: 0 auto;  
+}
+
+#portfolio .portfolio_wrap .popup_wrap .popup {
+    position: absolute;
+    top: 0; right: 0; left: 0; bottom: 0;
+    /* max-width: 1400px;
+    max-height: 830px; */
+    border-radius: 10px;
+    width: 50%;
+    height: 90%;
+    margin: auto;
+    margin-top: 75px;
+    z-index: 10;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.popup i {
+    /* display: block;  */
+    position: absolute; 
+    top: 20px; right: 30px; 
+    width: 23px;
+    height: 23px;
+    cursor: pointer;}
+
+.popup i > span{
+    position: absolute; 
+    width: 23px; 
+    height: 2px; 
+    background:#262626;
+}
+.popup > i > span:nth-child(1){
+    top: 50%; 
+    transform:rotate(45deg);
+}
+.popup > i > span:nth-child(2){
+    top: 50%; 
+    transform:rotate(-45deg);}
+
+.popup .pop_content {
+    /* position: relative; */
+    margin: 0 auto;
+    background-color: #fff;
+    width: 100%;
+    height: 90%;
+    z-index: 11;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 50px 0 40px 0;
+}
+
+/* 포트폴리오_팝업 끝 */
 
 #portfolio .portfolio_wrap .portfolio_tab {
     text-align: center;
