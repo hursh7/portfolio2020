@@ -159,7 +159,7 @@
                     <a href="#">Responsive</a>
                     <a href="#">App</a>
                 </div>
-                <div class="popup_wrap">
+                <!-- <div class="popup_wrap">
                     <div class="popup">
                         <i onclick="pop_close();">
                             <span></span>
@@ -169,9 +169,20 @@
 
                         </div>        
                     </div>
-                </div>
+                </div> -->
                 <div class="content_container clearfix">
-                    <div class="content" onclick="pop_open();">
+                    <div class="popup_wrap">
+                        <div class="popup">
+                            <i onclick="pop_close();">
+                                <span></span>
+                                <span></span>
+                            </i>
+                            <div class="pop_content">
+                                제튼    
+                            </div>        
+                        </div>
+                    </div>
+                    <div class="content" onclick="pop_open(this);">
                         <div class="item">
                             <img class="item_img" src="img/pf_web01.png" alt="이미지">
                             <div class="item_cover">
@@ -183,7 +194,18 @@
                         </div>
                         <p class="content_tit">Zetton</p>
                     </div>
-                    <div class="content">
+                    <div class="popup_wrap">
+                        <div class="popup">
+                            <i onclick="pop_close();">
+                                <span></span>
+                                <span></span>
+                            </i>
+                            <div class="pop_content">
+                                슆트    
+                            </div>        
+                        </div>
+                    </div>
+                    <div class="content" onclick="pop_open(this);">
                         <div class="item">
                             <img class="item_img" src="img/pf_mob01.png" alt="이미지">
                             <div class="item_cover">
@@ -195,7 +217,18 @@
                         </div>
                         <p class="content_tit">모바일명함 SHIFT</p>
                     </div>
-                    <div class="content">
+                    <div class="popup_wrap">
+                        <div class="popup">
+                            <i onclick="pop_close();">
+                                <span></span>
+                                <span></span>
+                            </i>
+                            <div class="pop_content">
+                                쉬프웹    
+                            </div>        
+                        </div>
+                    </div>
+                    <div class="content" onclick="pop_open(this);">
                         <div class="item">
                             <img class="item_img" src="img/pf_web02.png" alt="이미지">
                             <div class="item_cover">
@@ -207,7 +240,18 @@
                         </div>
                         <p class="content_tit">SHIFT Web</p>
                     </div>
-                    <div class="content">
+                    <div class="popup_wrap">
+                        <div class="popup">
+                            <i onclick="pop_close();">
+                                <span></span>
+                                <span></span>
+                            </i>
+                            <div class="pop_content">
+    
+                            </div>        
+                        </div>
+                    </div>
+                    <div class="content" onclick="pop_open(this);">
                         <div class="item">
                             <img class="item_img" src="img/pf_web03.png" alt="이미지">
                             <div class="item_cover">
@@ -219,7 +263,18 @@
                         </div>
                         <p class="content_tit">JEJECoMMS Co.</p>
                     </div>
-                    <div class="content">
+                    <div class="popup_wrap">
+                        <div class="popup">
+                            <i onclick="pop_close();">
+                                <span></span>
+                                <span></span>
+                            </i>
+                            <div class="pop_content">
+    
+                            </div>        
+                        </div>
+                    </div>
+                    <div class="content" onclick="pop_open(this);">
                         <div class="item">
                             <img class="item_img" src="img/pf_web04.png" alt="이미지">
                             <div class="item_cover">
@@ -231,7 +286,18 @@
                         </div>
                         <p class="content_tit">원공인중개사</p>
                     </div>
-                    <div class="content">
+                    <div class="popup_wrap">
+                        <div class="popup">
+                            <i onclick="pop_close();">
+                                <span></span>
+                                <span></span>
+                            </i>
+                            <div class="pop_content">
+    
+                            </div>        
+                        </div>
+                    </div>
+                    <div class="content" onclick="pop_open(this);">
                         <div class="item">
                             <img class="item_img" src="img/pf_web05.png" alt="이미지">
                             <div class="item_cover">
@@ -243,7 +309,18 @@
                         </div>
                         <p class="content_tit">메가박스</p>
                     </div>
-                    <div class="content">
+                    <div class="popup_wrap">
+                        <div class="popup">
+                            <i onclick="pop_close();">
+                                <span></span>
+                                <span></span>
+                            </i>
+                            <div class="pop_content">
+    
+                            </div>        
+                        </div>
+                    </div>
+                    <div class="content" onclick="pop_open(this);">
                         <div class="item">
                             <img class="item_img" src="img/pf_web06.png" alt="이미지">
                             <div class="item_cover">
@@ -255,7 +332,18 @@
                         </div>
                         <p class="content_tit">가비아</p>
                     </div>
-                    <div class="content">
+                    <div class="popup_wrap">
+                        <div class="popup">
+                            <i onclick="pop_close();">
+                                <span></span>
+                                <span></span>
+                            </i>
+                            <div class="pop_content">
+    
+                            </div>        
+                        </div>
+                    </div>
+                    <div class="content" onclick="pop_open(this);">
                         <div class="item">
                             <img class="item_img" src="img/pf_web05.png" alt="이미지">
                             <div class="item_cover">
@@ -296,8 +384,8 @@
             $("body").css("overflow-Y","auto");
         }
 
-        function pop_open () {
-            $(".popup_wrap").fadeIn();
+        function pop_open (this_pf) {
+            $(this_pf).prev().fadeIn(); // this 앞에 팝업 fadein
             $("body").css("overflow-Y","hidden");
         }
     </script>
