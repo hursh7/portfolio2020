@@ -268,14 +268,10 @@
 }
 
 #skill .skill_wrap .guage_wrap .guage_bg .gg04{
-    width: 75%;
+    width: 70%;
 }
 
 #skill .skill_wrap .guage_wrap .guage_bg .gg05{
-    width: 60%;
-}
-
-#skill .skill_wrap .guage_wrap .guage_bg .gg06{
     width: 85%;
 }
 
@@ -313,7 +309,7 @@
 /* 포트폴리오_팝업 */
 
 #portfolio .portfolio_wrap .popup_wrap {
-    display: none;
+    /* display: none; */
     position: fixed;
 	top: 0; right: 0; left: 0; bottom: 0;
 	background-color: rgba(0,0,0,.7);
@@ -403,6 +399,7 @@
     overflow: hidden;
     cursor: pointer;
     text-align: center;
+    z-index: 99;
 }
 
 #portfolio .portfolio_wrap .content_container .content .item {

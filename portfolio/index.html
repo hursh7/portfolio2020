@@ -138,7 +138,7 @@
                                     <span class="per">85 %</span>
                                 </p>
                                 <div class="guage_bg">
-                                    <span class="guage gg06"></span>
+                                    <span class="guage gg05"></span>
                                 </div>
                             </li>
                         </ul>
@@ -166,7 +166,7 @@
                             <span></span>
                         </i>
                         <div class="pop_content">
-
+                            쮸니멍청이    
                         </div>        
                     </div>
                 </div>
@@ -183,6 +183,17 @@
                         </div>
                         <p class="content_tit">Zetton</p>
                     </div>
+                    <!-- <div class="popup_wrap">
+                        <div class="popup">
+                            <i onclick="pop_close();">
+                                <span></span>
+                                <span></span>
+                            </i>
+                            <div class="pop_content">
+                                    
+                            </div>        
+                        </div>
+                    </div> -->
                     <div class="content">
                         <div class="item">
                             <img class="item_img" src="img/pf_mob01.png" alt="이미지">
@@ -296,9 +307,11 @@
             $("body").css("overflow-Y","auto");
         }
 
-        function pop_open () {
-            $(".popup_wrap").fadeIn();
-            $("body").css("overflow-Y","hidden");
+        function pop_open () {            
+            var popupdiv = $(this).prev("div.popup_wrap").find(".pop_content").text();
+            console.log(popupdiv);
+            $(this).prev().fadeIn();
+            // $("body").css("overflow-Y","hidden");
         }
     </script>
 </body>
