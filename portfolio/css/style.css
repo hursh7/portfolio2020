@@ -252,27 +252,52 @@
     height: 10px;
     display: block;
     border-radius: 90px;
-    /* transition-timing-function: ease; */
 }
+
+@keyframes mymove01 {
+    from {width: 0px;}
+    to {width: 90%;}
+  }
+  @keyframes mymove02 {
+    from {width: 0px;}
+    to {width: 80%;}
+  }
+  @keyframes mymove03 {
+    from {width: 0px;}
+    to {width: 70%;}
+  }
+  @keyframes mymove04 {
+    from {width: 0px;}
+    to {width: 75%;}
+  }
+  @keyframes mymove05 {
+    from {width: 0px;}
+    to {width: 85%;}
+  }
 
 #skill .skill_wrap .guage_wrap .guage_bg .gg01{
     width: 90%;
+    animation: mymove01 3s;
 }
 
 #skill .skill_wrap .guage_wrap .guage_bg .gg02{
-    width: 80%
+    width: 80%;
+    animation: mymove02 3s;
 }
 
 #skill .skill_wrap .guage_wrap .guage_bg .gg03{
     width: 70%;
+    animation: mymove03 3s;
 }
 
 #skill .skill_wrap .guage_wrap .guage_bg .gg04{
-    width: 70%;
+    width: 75%;
+    animation: mymove04 3s;
 }
 
 #skill .skill_wrap .guage_wrap .guage_bg .gg05{
     width: 85%;
+    animation: mymove05 3s;
 }
 
 #skill .skill_wrap .skill_img {
@@ -353,7 +378,7 @@
     top: 50%; 
     transform:rotate(-45deg);}
 
-.popup .pop_content {
+.popup .pop_scroll {
     /* position: relative; */
     margin: 0 auto;
     background-color: #fff;
@@ -363,6 +388,53 @@
     overflow-x: hidden;
     overflow-y: scroll;
     margin: 50px 0 40px 0;
+}
+
+.popup .pop_scroll .pop_content {
+    padding-left: 50px;
+}
+
+.popup .pop_scroll .pop_content .pop_tit {
+   font-size: 23px;
+   font-weight: 600;
+}
+.popup .pop_scroll .pop_content > a {
+    font-size: 18px;
+    color: #8080c0;
+    text-decoration: underline;
+ }
+
+ .popup .pop_scroll .pop_content .pop_index  {
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+    /* table-layout: fixed; */
+    margin-top: 30px;   
+}
+
+ .popup .pop_scroll .pop_content .pop_index th {
+    position: relative;
+    font-size: 16px;
+    font-weight: 600; 
+    padding-left: 17px;
+}
+
+ .popup .pop_scroll .pop_content .pop_index th:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 9px;
+    height: 5px;
+    background-color: #8080c0;
+    border-radius: 10px;
+}
+
+.popup .pop_scroll .pop_content .pop_index td{
+    font-size: 16px;
+    font-weight: 300; 
+    /* padding-left: 40px; */
 }
 
 /* 포트폴리오_팝업 끝 */
@@ -381,7 +453,7 @@
     color: #fff;
 }
 
-#portfolio .portfolio_wrap .portfolio_tab > a.active {
+#portfolio .portfolio_wrap .portfolio_tab > a.current {
     background-color: #2B2B40;
 }
 
@@ -463,6 +535,14 @@
   margin: 10px auto;
 }
 
+#contact {
+    position: relative;
+    width: 100%;
+    /* height: 100vh; */
+    height: 100%;
+    margin: 0 auto;
+    background-color: #566270;
+}
 
 
 
