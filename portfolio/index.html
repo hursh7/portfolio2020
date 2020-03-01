@@ -317,6 +317,17 @@
                 e.preventDefault();
                 $(this).addClass("current").siblings().removeClass("current");
             });
+
+            $(window).on('scroll', function() {
+                console.log($('#skill').offset().top);
+                console.log($('#about').offset().bottom);
+                console.log($(window).scrollTop());
+                
+                    // if($('#skill').offset().top < $(window).scrollTop()) {
+                    //     alert("도착했습니다.");
+                    // }
+                
+            });
         });
         
         // 헤더 페이지 이동 
