@@ -1,0 +1,670 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+@font-face{
+  font-family:'Cute Font';
+  src:url('cute-font-v7-korean_latin-regular.woff')format('woff');
+}
+
+@font-face{
+  font-family:'Nanum Gothic';
+  src:url('nanum-gothic-v16-korean_latin-700.woff')format('woff');
+}
+
+/* 헤더 css 시작*/
+#header {
+  background-color: rgba(0, 0, 0, 0.56);
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  display: none;
+  min-width: 890px;
+}
+
+#header #logo {
+  display: inline-block;
+  float: left;
+  margin-left: 8vh;
+}
+
+#header #logo #logo_img {
+  height: 7vh;
+  margin-top: 1.403vh;
+  margin-left: 2vh;
+}
+
+#header #menu_list {
+  display: inline-block;
+  float: right;
+  margin-right: 2.5vh;
+  margin-top: 0.7vh;
+  height: 8.403vh;
+}
+
+#header #menu_list .bt {
+  display: inline-block;
+  padding: 0 2vh;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Cute Font', cursive;
+  color: white;
+  font-size: 5vh;
+}
+
+#header #menu_list span{
+  color: white;
+  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  font-family: 'Cute Font', cursive;
+}
+
+#header #menu_list a {
+  color: white;
+  text-decoration: none;
+}
+
+/* #header #menu_list a .selected {
+  color: black;
+} */
+
+/* 헤더 css 끝 */
+/* 원소개 css */
+#menu1 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+#menu1 #left_1 {
+  text-align: center;
+  position: relative;
+  background-image: url("image/menu_shadow.png");
+  background-size: 100%;
+  display: inline-block;
+}
+
+#menu1 #left_1 #total_1 {
+  display: inline-block;
+  position: relative;
+  top: 25vh;
+  transform: translateY(-25%);
+}
+
+#menu1 #left_1 #total_1 #big_index{
+  width: 60%;
+  left: 20%;
+  position: relative;
+  border-bottom: 6px solid #9db696;
+}
+
+#menu1 #left_1 #total_1 #sogye {
+  font-size: 8vh;
+  font-family: 'Cute Font', cursive;
+  color: #4c4b4b;
+  text-shadow: 0.2vh 0.2vh 0.5vh gray;
+}
+
+#menu1 #left_1 #left_menu_1 {
+  width: 45vh;
+  display: inline-block;
+  margin-top: 2vh;
+}
+
+#menu1 #left_1 #left_menu_1 p {
+  font-size: 5vh;
+  padding: 1vh 0;
+  font-family: 'Cute Font', cursive;
+  cursor: pointer;
+  color: #4c4b4b;
+}
+
+#menu1 #left_1 #left_menu_1 p:hover {
+  color:  #5b6f28;
+}
+
+#menu1 #left_1 #left_menu_1 .selected{
+  color: #5b6f28;
+  text-shadow: 0.2vh 0.2vh 0.5vh gray;
+}
+
+#menu_1_1 .selected{
+  color: #6e9a00;
+  text-shadow: 0.2vh 0.2vh 0.5vh gray;
+}
+
+#menu_1_2 .selected{
+  color: #6e9a00;
+  text-shadow: 0.2vh 0.2vh 0.5vh gray;
+}
+
+#menu_1_3 .selected{
+  color: #6e9a00;
+  text-shadow: 0.2vh 0.2vh 0.5vh gray;
+}
+
+#menu1 #right_1_1 {
+  height: 100vh;
+  width: 75vw;
+  position: relative;
+  text-align: center;
+}
+
+#menu1 #right_1_1 #introduce {
+  /* display: inline-block; */
+  position: relative;
+  top: 70%;
+  transform: translateY(-70%);
+}
+
+#menu1 #right_1_1 img {
+  height: 75vh;
+}
+
+#menu1 #right_1_2 {
+  /* display: inline-block; */
+  height: 100vh;
+  width: 75vw;
+  position: relative;
+  text-align: center;
+}
+
+/*교육환경 css시작  */
+#menu1 #right_1_2 #d1 {
+  text-align: center;
+  position: relative;
+  top: 70%;
+  transform: translateY(-70%);
+  min-width: 1000px;
+}
+#gallery_top {
+  margin-bottom: 2vh;
+}
+
+#menu1 #right_1_2 #d1 #gallery_top #gallery_tab p {
+  cursor: pointer;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 2vh;
+  display: inline-block;
+  margin: 0 4vw;
+  padding: 0 2vw;
+}
+
+#menu1 #right_1_2 #d1 #gallery_top #gallery_tab p:hover {
+  border-bottom: 4px solid #c1e1b8;
+}
+
+#menu1 #right_1_2 #d1 #gallery_top #gallery_tab .selected2 {
+  border-bottom: 4px solid #c1e1b8;
+}
+
+/* #gallery_list css 시작 */
+.gallery_list_line:first-child {
+  margin-bottom: 2vh;
+}
+
+.gallery_list_line .gallery_list_img {
+  display: inline-block;
+  margin: 0 20px 0 20px;
+}
+.gallery_list_line .gallery_list_img img {
+  height: 33vh;
+}
+.gallery_list_text {
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Nanum Gothic', sans-serif;
+  /* height: 4vh; */
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+  border-bottom: 4px solid #c1e1b8;
+}
+.opacity {
+  visibility: hidden;
+}
+/* #gallery_list css 끝*/
+/*교육환경 css 끝  */
+
+/* 오시는길 css 시작 */
+#menu1 #right_1_3 {
+  /* display: inline-block; */
+  height: 100vh;
+  width: 75vw;
+  position: relative;
+  text-align: center;
+}
+
+#menu1 #right_1_3 #big {
+  text-align: center;
+  position: relative;
+  top: 70%;
+  transform: translateY(-70%);
+}
+
+#menu1 #right_1_3 #map {
+  display: inline-block;
+  width: 100vh;
+  height: 60vh;
+}
+
+#menu1 #right_1_3 img{
+  display: inline-block;
+  width: 100vh;
+  margin-top: 3vh;
+}
+
+/* 오시는길 css 끝 */
+/* 원소개 css 끝 */
+
+/* 교육안내 css */
+#menu2 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+#menu2 #left_2 {
+  text-align: center;
+  position: relative;
+  background-image: url("image/menu2_shadow.png");
+  background-size: 100%;
+  display: inline-block;
+}
+
+#menu2 #left_2 #total_2 {
+  display: inline-block;
+  position: relative;
+  top: 25vh;
+  transform: translateY(-25%);
+}
+
+#menu2 #left_2 #total_2 #big_index{
+  width: 60%;
+  left: 20%;
+  position: relative;
+  border-bottom: 6px solid #c8a2aa;
+}
+
+#menu2 #left_2 #total_2 #sogye {
+  font-size: 8vh;
+  font-family: 'Cute Font', cursive;
+  color: #4c4b4b;
+  text-shadow: 0.2vh 0.2vh 0.5vh grey;
+}
+
+#menu2 #left_2 #left_menu_2 {
+  width: 45vh;
+  display: inline-block;
+  margin-top: 2vh;
+}
+
+#menu2 #left_2 #left_menu_2 p {
+  font-size: 5vh;
+  padding: 1vh 0;
+  font-family: 'Cute Font', cursive;
+  cursor: pointer;
+  color: #4c4b4b;
+}
+
+#menu2 #left_2 #left_menu_2 p:hover {
+  color: #ba6d7c;
+}
+
+#menu2 #left_2 #left_menu_2 .selected{
+  color: #ba6d7c;
+  text-shadow: 0.2vh 0.2vh 0.5vh gray;
+}
+
+#menu_2_1 .selected{
+  color: #ba6d7c;
+  text-shadow: 0.2vh 0.2vh 0.5vh gray;
+}
+
+#menu_2_2 .selected{
+  color: #ba6d7c;
+  text-shadow: 0.2vh 0.2vh 0.5vh gray;
+}
+
+#menu_2_3 .selected{
+  color: #ba6d7c;
+  text-shadow: 0.2vh 0.2vh 0.5vh gray;
+}
+
+#menu2 #right_2_1 {
+  height: 100vh;
+  width: 75vw;
+  position: relative;
+  text-align: center;
+}
+
+#menu2 #right_2_1 #haru {
+  /* display: inline-block; */
+  position: relative;
+  top: 70%;
+  transform: translateY(-70%);
+}
+
+#menu2 #right_2_1 img {
+  width: 93vh;
+}
+
+#menu2 #right_2_2 {
+  height: 100vh;
+  width: 75vw;
+  position: relative;
+  text-align: center;
+}
+
+#menu2 #right_2_2 .year {
+  /* display: inline-block; */
+  position: relative;
+  top: 70%;
+  transform: translateY(-70%);
+}
+
+#menu2 #right_2_2 img {
+  width: 95vh;
+}
+
+#menu2 #right_2_3 {
+  display: inline-block;
+  vertical-align: top;
+  float: right;
+  height: 100vh;
+  width: 75vw;
+  font-size: 10vh;
+}
+
+/*교육과정 css시작  */
+#menu2 #right_2_3 #d2 {
+  position: relative;
+  top: 70%;
+  transform: translateY(-70%);
+}
+#gallery_top1 {
+  text-align: center;
+  padding-bottom: 1vh;
+}
+#gallery_top1 p {
+  cursor: pointer;
+  font-family: 'Nanum Gothic', sans-serif;
+  display: inline-block;
+  font-size: 2vh;
+  margin: 0 4vw;
+  padding: 0 2vw;
+}
+/* #menu2 #right_2_3 #d2 #gallery_top1 .selected2 {
+  border-bottom: 4px solid #c1e1b8;
+}
+#menu2 #right_2_3 #d2 #gallery_top1 p:hover {
+  border-bottom: 4px solid #c1e1b8;
+} */
+#gallery_list1 {
+  text-align: center;
+}
+#gallery_list1 img {
+  height: 80vh;
+}
+#gallery_list_2 {
+  text-align: center;
+}
+#gallery_list_2 img {
+  height: 80vh;
+}
+#gallery_list_3 {
+  text-align: center;
+}
+#gallery_list_3 img {
+  height: 80vh;
+}
+#gallery_list_4 {
+  text-align: center;
+}
+#gallery_list_4 img {
+  height: 80vh;
+}
+/*교육과정 css 끝  */
+
+/* 교육안내 css 끝 */
+/* 입학안내 css */
+#menu3 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+#menu3 #left_3 {
+  text-align: center;
+  position: relative;
+  background-image: url("image/menu3_shadow.png");
+  background-size: 100%;
+  display: inline-block;
+}
+
+#menu3 #left_3 #total_3 {
+  display: inline-block;
+  position: relative;
+  top: 25vh;
+  transform: translateY(-25%);
+}
+
+#menu3 #left_3 #total_3 #big_index{
+  width: 60%;
+  left: 20%;
+  position: relative;
+  border-bottom: 6px solid #cbaa56;
+}
+
+#menu3 #left_3 #total_3 #sogye {
+  font-size: 8vh;
+  font-family: 'Cute Font', cursive;
+  color: #4c4b4b;
+  text-shadow: 0.2vh 0.2vh 0.5vh gray;
+}
+
+#menu3 #left_3 #left_menu_3 {
+  width: 45vh;
+  display: inline-block;
+  margin-top: 2vh;
+}
+
+#menu3 #left_3 #left_menu_3 p {
+  font-size: 5vh;
+  padding: 1vh 0;
+  font-family: 'Cute Font', cursive;
+  cursor: pointer;
+  color: #4c4b4b;
+}
+
+#menu3 #left_3 #left_menu_3 p:hover {
+  color: #7f4c04;
+}
+#menu3 #left_3 #left_menu_3 .selected {
+  color: #7f4c04;
+  text-shadow: 0.2vh 0.2vh 0.5vh gray;
+}
+
+#menu_3_1 .selected{
+  color: #7f4c04;
+  text-shadow: 0.2vh 0.2vh 0.5vh gray;
+}
+
+#menu_3_2 .selected{
+  color: #7f4c04;
+  text-shadow: 0.2vh 0.2vh 0.5vh gray;
+}
+
+#menu3 #right_3_1 {
+  height: 100vh;
+  width: 75vw;
+  position: relative;
+  text-align: center;
+}
+
+#menu3 #right_3_1 #mozip {
+  /* display: inline-block; */
+  position: relative;
+  top: 70%;
+  transform: translateY(-70%);
+}
+
+#menu3 #right_3_1 img {
+  width: 90vh;
+}
+
+#menu3 #right_3_2 {
+  height: 100vh;
+  width: 75vw;
+  position: relative;
+  text-align: center;
+}
+
+#menu3 #right_3_2 #bus {
+  /* display: inline-block; */
+  position: relative;
+  top: 70%;
+  transform: translateY(-70%);
+}
+
+#menu3 #right_3_2 img {
+  width: 109vh;
+}
+
+/* 입학안내 css 끝 */
+/* 키즈노트 css */
+#menu4 {
+  width: 100%;
+  min-width: 1400px;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  /* background-color: blue; */
+}
+
+#menu4 #left_4 {
+  /* width: 25vw; */
+  text-align: center;
+  position: relative;
+  background-image: url("image/menu4_shadow.png");
+  background-size: 100%;
+  display: inline-block;
+  /* box-shadow: 0 0px 5px gray; */
+  /* background-color: red; */
+}
+
+#menu4 #left_4 #total_4 {
+  display: inline-block;
+  position: relative;
+  top: 25vh;
+  transform: translateY(-25%);
+}
+
+#menu4 #left_4 #total_4 #big_index{
+  width: 60%;
+  border-bottom: 6px solid #98b9c8;
+  left: 20%;
+  position: relative;
+}
+
+#menu4 #left_4 #total_4 #sogye {
+  font-size: 8vh;
+  font-family: 'Cute Font', cursive;
+  color: #4c4b4b;
+  text-shadow: 0.2vh 0.2vh 0.5vh gray;
+}
+
+#menu4 #left_4 #left_menu_4 {
+  width: 45vh;
+  display: inline-block;
+  margin-top: 2vh;
+}
+
+#menu4 #left_4 #left_menu_4 p {
+  font-size: 5vh;
+  padding: 1vh 0;
+  font-family: 'Cute Font', cursive;
+  cursor: pointer;
+  color: #00569b;
+  text-shadow: 0.2vh 0.2vh 0.5vh gray;
+}
+
+#menu4 #right_4_1 {
+  height: 100vh;
+  width: 75vw;
+  position: relative;
+  text-align: center;
+}
+
+#menu4 #right_4_1 #kids {
+  position: relative;
+  top: 70%;
+  transform: translateY(-70%);
+}
+
+#position {
+  position: relative;
+}
+
+#menu4 #right_4_1 img {
+  height: 80vh;
+}
+
+#menu4 #right_4_1 #apps {
+  position: absolute;
+  left: 210px;
+  top: 500px;
+  /* left: -12%; */
+  /* transform: translateY(-350%); */
+  height: 6vh;
+  min-width: 500px;
+}
+
+#menu4 #right_4_1 #apps a {
+  display: inline-block;
+}
+
+#menu4 #right_4_1 #apps img {
+  height: 6vh;
+}
+
+#menu4 #right_4_1 a.app {
+  margin-right: 1px;
+}
+
+/* 키즈노트 css 끝 */
+#footer {
+  background-color: #5d5d5d;
+  height: 9.259vh;
+  text-align: center;
+  position: relative;
+  min-width: 1400px;
+}
+
+#center_footer {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#footer_logo {
+  margin-right: 1.3vh;
+  display: inline-block;
+}
+
+#footer_logo img {
+  height: 4.259vh;
+}
+
+#address {
+  display: inline-block;
+  font-size: 1.5vh;
+  text-align: left;
+  color: white;
+}

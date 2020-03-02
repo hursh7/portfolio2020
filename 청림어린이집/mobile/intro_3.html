@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>오시는길</title>
+  <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=7cf615d5d0b5db79295fc7dd791cff7e"></script>
+  <script src="jquery-3.3.1.js" type="text/javascript"></script>
+  <script src="index_mobile.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet">
+  <link rel="stylesheet" href="intro_3.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+</head>
+
+<body>
+  <div id="header">
+    <div id="logo"><a href="index.html"><img src="image/logo_home.png" alt=""></a></div>
+    <div id="wrapper">
+      <div id="line-wrapper">
+        <div id="line-top" class="line init top-reverse"></div>
+        <div id="line-mid" class="line init mid-reverse"></div>
+        <div id="line-bot" class="line init bot-reverse"></div>
+      </div>
+    </div>
+    <div id="nav_menu">
+      <div id="nav">
+        <div id="child">
+          <img src="image/nav_menuimg_2.png" alt="">
+        </div>
+        <div id="nav_a">
+          <a href="intro_1.html">인사말</a>
+          <span>|</span>
+          <a href="intro_2.html">교육환경</a>
+          <span>|</span>
+          <a href="intro_3.html">오시는길</a>
+        </div>
+      </div>
+      <!-- //nav -->
+    </div>
+    <!-- //nav_menu -->
+  </div>
+  <!-- //header -->
+
+  <div id="contents">
+      <div id="big">
+          <div id="map"></div>
+          <script>
+          var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+          mapOption = {
+            center: new daum.maps.LatLng(37.619385, 126.822490), // 지도의 중심좌표
+            level: 2 // 지도의 확대 레벨
+          };
+
+          var map = new daum.maps.Map(mapContainer, mapOption);
+
+          // 마커가 표시될 위치입니다
+          var markerPosition = new daum.maps.LatLng(37.619998, 126.823657);
+
+          // 마커를 생성합니다
+          var marker = new daum.maps.Marker({
+            position: markerPosition
+          });
+
+          // 마커가 지도 위에 표시되도록 설정합니다
+          marker.setMap(map);
+
+          var iwContent =
+          '<div style="padding:5px; font-size:15px;">청림어린이집<br><a href="http://map.daum.net/link/map/청림어린이집,37.619998,126.823657" style="color:blue; font-size:15px;" target="_blank">큰지도보기</a> <a href="http://map.daum.net/link/to/청림어린이집,37.619998,126.823657" style="color:blue; font-size:15px;" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+          iwPosition = new daum.maps.LatLng(37.619998, 126.823657); //인포윈도우 표시 위치입니다
+
+          // 인포윈도우를 생성합니다
+          var infowindow = new daum.maps.InfoWindow({
+            position: iwPosition,
+            content: iwContent
+          });
+
+          // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+          infowindow.open(map, marker);
+          </script>
+          <img src="image/bus_text.png" alt="">
+        </div>
+  </div>
+  <!-- //contents -->
+
+  <div id="footer">
+    <div id="center_footer">
+      <div id="footer_logo"><img src="image/footer_image.png" alt=""></div>
+      <div id="address">경기도 고양시 덕양구 지도로 13번길 20-24 청림어린이집 <br>전화.031-973-0260 &nbsp;Fax.031-970-7827 <br>&copy; 2019 Copyright 청림어린이집 All Rights Reserved.</div>
+    </div>
+    </div>
+  </div>
+  <!-- //footer -->
+  <!-- 슬라이드메뉴 -->
+  <div id="menu_total">
+    <div id="main_slide">
+      <div class="menu_index">
+        <p> MENU </p>
+      </div>
+      <div class="top_menu">
+        <p> 원소개 </p>
+      </div>
+      <div class="bottom_menu">
+        <a href="intro_1.html"> <p> 인사말 </p> </a>
+        <a href="intro_2.html"> <p> 교육환경 </p> </a>
+        <a href="intro_3.html"> <p> 오시는 길 </p> </a>
+      </div>
+      <div class="top_menu">
+        <p> 교육안내 </p>
+      </div>
+      <div class="bottom_menu">
+        <a href="edu_1.html"> <p> 하루일과 </p> </a>
+        <a href="edu_2.html"> <p> 연간행사 </p> </a>
+        <a href="edu_3.html"> <p> 교육과정 </p> </a>
+      </div>
+      <div class="top_menu">
+        <p> 입학안내 </p>
+      </div>
+      <div class="bottom_menu">
+        <a href="mozip_1.html"> <p> 모집요강 </p> </a>
+        <a href="mozip_2.html"> <p> 셔틀버스 </p> </a>
+      </div>
+      <div class="top_menu">
+        <p> 키즈노트 </p>
+      </div>
+      <div class="bottom_menu">
+        <a href="kids.html"> <p> 어플소개 </p> </a>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

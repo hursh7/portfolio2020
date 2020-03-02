@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+@font-face{
+  font-family:'Cute Font';
+  src:url('cute-font-v7-korean_latin-regular.woff')format('woff');
+}
+
+@font-face{
+  font-family:'Nanum Gothic';
+  src:url('nanum-gothic-v16-korean_latin-700.woff')format('woff');
+}
+
+/* 교육안내 css */
+#menu2 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+#menu2 #left_2 {
+  text-align: center;
+  position: relative;
+  background-image: url("image/menu2_shadow.png");
+  background-size: 100%;
+  display: inline-block;
+}
+
+#menu2 #left_2 #total_2 {
+  display: inline-block;
+  position: relative;
+  top: 25vh;
+  transform: translateY(-25%);
+}
+
+#menu2 #left_2 #total_2 #big_index{
+  width: 60%;
+  left: 20%;
+  position: relative;
+  border-bottom: 6px solid white;
+}
+
+#menu2 #left_2 #total_2 #sogye {
+  font-size: 8vh;
+  font-family: 'Cute Font', cursive;
+  color: white;
+  text-shadow: 0.2vh 0.2vh 0.5vh gray;
+}
+
+#menu2 #left_2 #left_menu_2 {
+  width: 45vh;
+  display: inline-block;
+  margin-top: 2vh;
+}
+
+#menu2 #left_2 #left_menu_2 p {
+  font-size: 5vh;
+  padding: 1vh 0;
+  font-family: 'Cute Font', cursive;
+  cursor: pointer;
+  color: white;
+}
+
+#left_2 #left_menu_2 p.selected {
+  color:white;
+  text-shadow: 0.2vh 0.2vh 0.5vh gray;
+}
+
+#menu2 #left_2 #left_menu_2 p:hover {
+  color: #ba6d7c;
+}
+#menu2 #left_2 #left_menu_2 .selected{
+  color: #ba6d7c;
+}
+
+#menu2 #right_2_1 {
+  height: 100vh;
+  width: 75vw;
+  position: relative;
+  text-align: center;
+}
+
+#menu2 #right_2_1 #haru {
+  /* display: inline-block; */
+  position: relative;
+  top: 70%;
+  transform: translateY(-70%);
+}
+
+#menu2 #right_2_1 img {
+  width: 95vh;
+}
+
+#menu2 #right_2_2 {
+  height: 100vh;
+  width: 75vw;
+  position: relative;
+  text-align: center;
+}
+
+#menu2 #right_2_2 .year {
+  /* display: inline-block; */
+  position: relative;
+  top: 70%;
+  transform: translateY(-70%);
+}
+
+#menu2 #right_2_2 img {
+  width: 95vh;
+}
+
+#menu2 #right_2_3 {
+  display: inline-block;
+  vertical-align: top;
+  float: right;
+  height: 100vh;
+  width: 75vw;
+  font-size: 10vh;
+}
+
+/*교육과정 css시작  */
+#menu2 #right_2_3 #d2 {
+  position: relative;
+  top: 70%;
+  transform: translateY(-70%);
+}
+#gallery_top1 {
+  text-align: center;
+  margin-bottom: 1vh;
+}
+#gallery_top1 p {
+  cursor: pointer;
+  font-family: 'Nanum Gothic', sans-serif;
+  display: inline-block;
+  font-size: 2vh;
+  margin: 0 4vw;
+  padding: 0 2vw;
+}
+#menu2 #right_2_3 #d2 #gallery_top1 .selected2 {
+  border-bottom: 4px solid #c1e1b8;
+}
+#menu2 #right_2_3 #d2 #gallery_top1 p:hover {
+  border-bottom: 4px solid #c1e1b8;
+}
+#gallery_list1 {
+  text-align: center;
+}
+#gallery_list1 img {
+  height: 80vh;
+}
+#gallery_list_2 {
+  text-align: center;
+}
+#gallery_list_2 img {
+  height: 80vh;
+}
+#gallery_list_3 {
+  text-align: center;
+}
+#gallery_list_3 img {
+  height: 80vh;
+}
+#gallery_list_4 {
+  text-align: center;
+}
+#gallery_list_4 img {
+  height: 80vh;
+}
+/*교육과정 css 끝  */
+
+/* 교육안내 css 끝 */

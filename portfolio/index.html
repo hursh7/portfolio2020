@@ -6,7 +6,15 @@
     <title>Portfolio_2020_Park</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/9aaeb1762e.js" crossorigin="anonymous"></script>
+    import requests
+
+    searching = '합정 스타벅스'
+    url = 'https://dapi.kakao.com/v2/local/search/keyword.json?query={}'.format(searching)
+    headers = {
+        "Authorization": "KakaoAK 여기에카카오API키입력하세요"
+    }
+    places = requests.get(url, headers = headers).json()['documents']
+    places
 </head>
 <body>
     <div class="wrap">
@@ -167,35 +175,40 @@
                             </i>
                             <div class="pop_scroll">
                                 <div class="pop_content">
-                                    <p class="pop_tit">Zetton</p>
+                                    <p class="pop_tit">Zetton<span>&nbsp;&nbsp;&nbsp;*본 페이지는 회사사정에 따라 수정되었습니다.</span></p>
                                     <a href="http://www.zetton.co.kr/" target="_blank">http://www.zetton.co.kr/</a>
                                     <table class="pop_index">
                                         <colgroup>
                                             <col width="100px">
                                             <col>
                                         </colgroup>
-                                            <tbody>
-                                                <tr>
-                                                    <th>구분</th>
-                                                    <td>팀 프로젝트 / 반응형 웹페이지</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>참여도</th>
-                                                    <td>퍼블리싱 100% (메인페이지/상세페이지)</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>기간</th>
-                                                    <td>약 2주</td>
-                                                </tr>
-                                            </tbody>
+                                            <tr>
+                                                <th>구분</th>
+                                                <td>팀 프로젝트 / 반응형 웹페이지</td>
+                                            </tr>
+                                            <tr>
+                                                <th>참여도</th>
+                                                <td>퍼블리싱 100% (메인페이지/상세페이지)</td>
+                                            </tr>
+                                            <tr>
+                                                <th>기간</th>
+                                                <td>약 2주</td>
+                                            </tr>
                                     </table>
+                                    <ul class="pop_sub">
+                                        <li>- 웹콘텐츠디자인 과정 팀 프로젝트에서 퍼블리싱(메인/서브 페이지) 역할로 제작한 홈페이지</li>
+                                        <li>- 원페이지로 제작하여 접근성을 높이고, 교육 프로그램에 대한 상세 정보를 위한 서브 페이지 제작 </li>
+                                    </ul>
+                                    <div class="pop_img">
+                                        <img src="img/zetton.png" alt="제튼_홈페이지">
+                                    </div>
                                 </div>
                             </div>        
                         </div>
                     </div>
                     <div class="content" onclick="pop_open(this);">
                         <div class="item">
-                            <img class="item_img" src="img/pf_web01.png" alt="이미지">
+                            <img class="item_img" src="img/pf_web01.png" alt="제튼">
                             <div class="item_cover">
                                 <div class="item_txt">
                                     <h4>Zetton</h4>
@@ -205,10 +218,51 @@
                         </div>
                         <p class="content_tit">Zetton</p>
                     </div>
-
+                    <div class="popup_wrap">
+                        <div class="popup">
+                            <i onclick="pop_close();">
+                                <span></span>
+                                <span></span>
+                            </i>
+                            <div class="pop_scroll">
+                                <div class="pop_content">
+                                    <p class="pop_tit">모바일명함 SHIFT</p>
+                                    <a href="https://play.google.com/store/apps/details?id=com.comms.user.shift" target="_blank">https://play.google.com/store/apps/details?id=com.comms.user.shift</a>
+                                    <table class="pop_index">
+                                        <colgroup>
+                                            <col width="100px">
+                                            <col>
+                                        </colgroup>
+                                            <tr>
+                                                <th>구분</th>
+                                                <td>유지보수 / 모바일 앱</td>
+                                            </tr>
+                                            <tr>
+                                                <th>참여도</th>
+                                                <td>UI/UX 디자인 / 퍼블리싱</td>
+                                            </tr>
+                                            <tr>
+                                                <th>기간</th>
+                                                <td>2019.07.23 ~ 2020.01.31</td>
+                                            </tr>
+                                    </table>
+                                    <ul class="pop_sub">
+                                        <li>- (주)제제컴즈의 모바일명함 어플리케이션 UI/UX 디자인</li>
+                                        <li>- 모바일명함 디자인 및 웹뷰를 위한 코드화 (flexbox 레이아웃 적용)</li>
+                                    </ul>
+                                    <div class="pop_img_mo clearfix">
+                                        <img src="img/shift01.png" alt="모바일명함_SHIFT01">
+                                        <img src="img/shift02.png" alt="모바일명함_SHIFT02">
+                                        <img src="img/shift03.png" alt="모바일명함_SHIFT03">
+                                        <img src="img/shift04.png" alt="모바일명함_SHIFT04">
+                                    </div>
+                                </div>
+                            </div>        
+                        </div>
+                    </div>
                     <div class="content" onclick="pop_open(this);">
                         <div class="item">
-                            <img class="item_img" src="img/pf_mob01.png" alt="이미지">
+                            <img class="item_img" src="img/pf_mob01.png" alt="모바일명함_SHIFT_App ">
                             <div class="item_cover">
                                 <div class="item_txt">
                                     <h4>모바일명함 SHIFT</h4>
@@ -218,10 +272,10 @@
                         </div>
                         <p class="content_tit">모바일명함 SHIFT</p>
                     </div>
-         
+                    
                     <div class="content" onclick="pop_open(this);">
                         <div class="item">
-                            <img class="item_img" src="img/pf_web02.png" alt="이미지">
+                            <img class="item_img" src="img/pf_web02.png" alt="SHIFT_Web페이지">
                             <div class="item_cover">
                                 <div class="item_txt">
                                     <h4>SHIFT Web</h4>
@@ -231,10 +285,10 @@
                         </div>
                         <p class="content_tit">SHIFT Web</p>
                     </div>
-                 
+                    
                     <div class="content" onclick="pop_open(this);">
                         <div class="item">
-                            <img class="item_img" src="img/pf_web03.png" alt="이미지">
+                            <img class="item_img" src="img/pf_web03.png" alt="(주)제제컴즈_Web페이지">
                             <div class="item_cover">
                                 <div class="item_txt">
                                     <h4>JEJECoMMS Co.</h4>
@@ -244,10 +298,10 @@
                         </div>
                         <p class="content_tit">JEJECoMMS Co.</p>
                     </div>
-                 
+                    
                     <div class="content" onclick="pop_open(this);">
                         <div class="item">
-                            <img class="item_img" src="img/pf_web04.png" alt="이미지">
+                            <img class="item_img" src="img/pf_web04.png" alt="원공인중개사_Web페이지">
                             <div class="item_cover">
                                 <div class="item_txt">
                                     <h4>One-real estimate</h4>
@@ -257,10 +311,10 @@
                         </div>
                         <p class="content_tit">원공인중개사</p>
                     </div>
-                
+                    
                     <div class="content" onclick="pop_open(this);">
                         <div class="item">
-                            <img class="item_img" src="img/pf_web05.png" alt="이미지">
+                            <img class="item_img" src="img/pf_web05.png" alt="메가박스_Web페이지">
                             <div class="item_cover">
                                 <div class="item_txt">
                                     <h4>MegaBox</h4>
@@ -270,10 +324,10 @@
                         </div>
                         <p class="content_tit">메가박스</p>
                     </div>
-                
+                   
                     <div class="content" onclick="pop_open(this);">
                         <div class="item">
-                            <img class="item_img" src="img/pf_web06.png" alt="이미지">
+                            <img class="item_img" src="img/pf_web06.png" alt="가비아_Web페이지">
                             <div class="item_cover">
                                 <div class="item_txt">
                                     <h4>Gabia</h4>
@@ -283,13 +337,13 @@
                         </div>
                         <p class="content_tit">가비아</p>
                     </div>
-               
+                    
                     <div class="content" onclick="pop_open(this);">
                         <div class="item">
                             <img class="item_img" src="img/pf_web05.png" alt="이미지">
                             <div class="item_cover">
                                 <div class="item_txt">
-                                    <h4>One-real Estimate</h4>
+                                    <h4>Lorem Ipsum</h4>
                                     <p>#Responsive #프로젝트 #퍼블리싱</p>
                                 </div>
                             </div>
@@ -301,7 +355,14 @@
          </section>
          <section id="contact">
             <div class="contact_wrap clearfix">
-               
+                <div class="map_wrap">
+                    
+                </div>
+                <div class="guage_wrap">
+                    <h2>Skill</h2>
+                    <div class="line"></div>
+                    <h3>"UI/UX에 대한 이해를 바탕으로 디자인하고,<br>웹 표준/접근성에 맞는 마크업을 통해 반응형 웹페이지를 제작합니다."</h3>
+                </div>
             </div>
          </section>
 
