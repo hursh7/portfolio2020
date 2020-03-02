@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+@font-face{
+  font-family:'Cute Font';
+  src:url('cute-font-v7-korean_latin-regular.woff')format('woff');
+}
+
+@font-face{
+  font-family:'Nanum Gothic';
+  src:url('nanum-gothic-v16-korean_latin-700.woff')format('woff');
+}
+
+/* 원소개 css */
+
+/*교육환경 css시작  */
+#menu1 #right_1_2 {
+  display: inline-block;
+  height: 100vh;
+  width: 75vw;
+  position: relative;
+}
+
+#menu1 #right_1_2 #d1 {
+  text-align: center;
+  position: relative;
+  top: 70%;
+  transform: translateY(-70%);
+}
+#gallery_top { /* ul이랑 #gallery_list랑 간격조절 */
+  margin-bottom: 2vh;
+}
+#menu1 #right_1_2 #d1 #gallery_top #gallery_tab p {
+  cursor: pointer;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 2vh;
+  display: inline-block;
+  margin: 0 4vw;
+  padding: 0 2vw;
+}
+
+#menu1 #right_1_2 #d1 #gallery_top #gallery_tab p:hover {
+  border-bottom: 4px solid #c1e1b8;
+}
+
+#menu1 #right_1_2 #d1 #gallery_top #gallery_tab .selected2 {
+  border-bottom: 4px solid #c1e1b8;
+}
+
+/* #gallery_list css 시작 */
+.gallery_list_line:first-child {
+  margin-bottom: 2vh;
+}
+
+.gallery_list_line .gallery_list_img {
+  display: inline-block;
+  margin: 0 20px 0 20px;
+}
+.gallery_list_line .gallery_list_img img {
+  height: 35vh;
+}
+.gallery_list_text {
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Nanum Gothic', sans-serif;
+  /* height: 4vh; */
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+  border-bottom: 4px solid #c1e1b8;
+}
+/* #gallery_list css 끝*/
+
+/*교육환경 css 끝  */
+
+/* 원소개 css 끝 */
