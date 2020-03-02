@@ -6,15 +6,7 @@
     <title>Portfolio_2020_Park</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
-    import requests
-
-    searching = '합정 스타벅스'
-    url = 'https://dapi.kakao.com/v2/local/search/keyword.json?query={}'.format(searching)
-    headers = {
-        "Authorization": "KakaoAK 여기에카카오API키입력하세요"
-    }
-    places = requests.get(url, headers = headers).json()['documents']
-    places
+    <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=653072818d0b69f14dba3e57f1835677"></script>
 </head>
 <body>
     <div class="wrap">
@@ -356,7 +348,40 @@
          <section id="contact">
             <div class="contact_wrap clearfix">
                 <div class="map_wrap">
-                    
+                    <div id="map"></div>
+                    <script>
+                    var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+                    mapOption = {
+                        center: new daum.maps.LatLng(37.2396185, 127.1676664), // 지도의 중심좌표
+                        level: 2 // 지도의 확대 레벨
+                    };
+
+                    var map = new daum.maps.Map(mapContainer, mapOption);
+
+                    // 마커가 표시될 위치입니다
+                    var markerPosition = new daum.maps.LatLng(37.2396185, 127.1676664);
+
+                    // 마커를 생성합니다
+                    var marker = new daum.maps.Marker({
+                        position: markerPosition
+                    });
+
+                    // 마커가 지도 위에 표시되도록 설정합니다
+                    marker.setMap(map);
+
+                    var iwContent =
+                    '<div style="padding:5px; font-size:15px; color: #000;">용인행정타운두산위브2단지<br><a href="http://map.daum.net/link/map/용인행정타운두산위브2단지,37.2396185, 127.1676664" style="color:blue; font-size:15px;" target="_blank">큰지도보기</a> <a href="http://map.daum.net/link/to/용인행정타운두산위브2단지,37.2396185, 127.1676664" style="color:blue; font-size:15px;" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+                    iwPosition = new daum.maps.LatLng(37.2396185, 127.1676664); //인포윈도우 표시 위치입니다                    
+
+                    // 인포윈도우를 생성합니다
+                    var infowindow = new daum.maps.InfoWindow({
+                        position: iwPosition,
+                        content: iwContent
+                    });
+
+                    // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+                    infowindow.open(map, marker);
+                    </script>
                 </div>
                 <div class="guage_wrap">
                     <h2>Skill</h2>

@@ -601,7 +601,14 @@
    float: left;
    width: 50%;
    color: #fff;
-   padding-top: 60px;
+   /* padding-top: 60px; */
+}
+
+#contact .contact_wrap .map_wrap #map {
+    display: inline-block;
+    width: calc(100% - 42px);
+    height: 100vh;
+    box-sizing: border-box;
 }
 
 #contact .contact_wrap .guage_wrap {
@@ -642,6 +649,3 @@
 }
 
 /* 섹션_컨택트_끝 */
-
-
-
