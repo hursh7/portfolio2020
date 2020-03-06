@@ -6,13 +6,20 @@
     <title>Portfolio_2020_Park</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" 
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous">
     <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=653072818d0b69f14dba3e57f1835677"></script>
 </head>
 <body>
     <div class="wrap">
+
+        <!-- header ---------- -->
+
         <header id="header" class="header clearfix">
             <h1 class="logo">
-                <a href="#">박준형</a>
+                <a href="#">로고</a>
             </h1>
             <div class="gnb_wrap">
                 <div class="gnb">
@@ -25,16 +32,24 @@
                     </ul>
                 </div>
                 <div class="gnb_mobile">
-                    <ul>
-                        <li><a href="#" class="on">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Skill</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
+                    <a class="menu_trigger" href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
                 </div>
+                <ul class="menu_drop">
+                    <li><a href="#home" class="active" onclick="movePage(home);">Home</a></li>
+                    <li><a href="#about" onclick="movePage(about);">About</a></li>
+                    <li><a href="#skill" onclick="movePage(skill);">Skill</a></li>
+                    <li><a href="#portfolio" onclick="movePage(portfolio);">Portfolio</a></li>
+                    <li><a href="#contact" onclick="movePage(contact);">Contact</a></li>
+                </ul>
             </div>
         </header>
+
+        <!-- section_home ---------- -->
+
         <section id="home">
            <div class="main_text">
                <div class="typing_text">Welcome to my Portfolio.</div>
@@ -42,6 +57,9 @@
                <p class="sub_txt">방문해주셔서 감사합니다.</p>
            </div>
         </section>
+
+        <!-- section_about ---------- -->
+
         <section id="about">
             <h2>About</h2>
             <div class="line"></div>
@@ -77,6 +95,9 @@
                 </div>
             </div>
          </section>
+
+         <!-- section_skill ---------- -->
+
          <section id="skill">
             <div class="skill_wrap clearfix">
                 <div class="guage_wrap">
@@ -148,6 +169,9 @@
                 </div>
             </div>
          </section>
+
+         <!-- section_portfolio ---------- -->
+
          <section id="portfolio">
             <h2>Portfolio</h2>
             <div class="line"></div>
@@ -159,6 +183,7 @@
                     <a href="#">Portfolio</a>
                 </div>
                 <div class="content_container clearfix">
+                    <!-- zetton -->
                     <div class="popup_wrap">
                         <div class="popup">
                             <i onclick="pop_close();">
@@ -180,7 +205,7 @@
                                             </tr>
                                             <tr>
                                                 <th>참여도</th>
-                                                <td>퍼블리싱 100% (메인페이지/상세페이지)</td>
+                                                <td>퍼블리싱 100% (메인페이지, 상세페이지)</td>
                                             </tr>
                                             <tr>
                                                 <th>기간</th>
@@ -210,6 +235,7 @@
                         </div>
                         <p class="content_tit">Zetton</p>
                     </div>
+                    <!-- shiftapp -->
                     <div class="popup_wrap">
                         <div class="popup">
                             <i onclick="pop_close();">
@@ -235,7 +261,7 @@
                                             </tr>
                                             <tr>
                                                 <th>기간</th>
-                                                <td>2019.07.23 ~ 2020.01.31</td>
+                                                <td>2019. 07. 23 ~ 2020. 01. 31</td>
                                             </tr>
                                     </table>
                                     <ul class="pop_sub">
@@ -264,7 +290,47 @@
                         </div>
                         <p class="content_tit">모바일명함 SHIFT</p>
                     </div>
-                    
+                    <!-- shiftweb -->
+                    <div class="popup_wrap">
+                        <div class="popup">
+                            <i onclick="pop_close();">
+                                <span></span>
+                                <span></span>
+                            </i>
+                            <div class="pop_scroll">
+                                <div class="pop_content">
+                                    <p class="pop_tit">SHIFTAPP Web</p>
+                                    <a href="https://www.shiftapp.net/" target="_blank">https://www.shiftapp.net/</a>
+                                    <table class="pop_index">
+                                        <colgroup>
+                                            <col width="100px">
+                                            <col>
+                                        </colgroup>
+                                            <tr>
+                                                <th>구분</th>
+                                                <td>유지보수 / 반응형 웹페이지</td>
+                                            </tr>
+                                            <tr>
+                                                <th>참여도</th>
+                                                <td>퍼블리싱</td>
+                                            </tr>
+                                            <tr>
+                                                <th>기간</th>
+                                                <td>2019. 07. 23 ~ 2020. 01. 31</td>
+                                            </tr>
+                                    </table>
+                                    <ul class="pop_sub">
+                                        <li>- SHIFT App 소개 페이지 유지보수 (기능 추가에 따른 지속적인 업데이트)</li>
+                                        <li>- 우측고정메뉴 및 사용설명서 페이지 퍼블리싱</li>
+                                        <li>- flexbox 레이아웃 적용</li>
+                                    </ul>
+                                    <div class="pop_img">
+                                        <img src="img/shift.png" alt="시프트앱_홈페이지">
+                                    </div>
+                                </div>
+                            </div>        
+                        </div>
+                    </div>
                     <div class="content" onclick="pop_open(this);">
                         <div class="item">
                             <img class="item_img" src="img/pf_web02.png" alt="SHIFT_Web페이지">
@@ -277,7 +343,46 @@
                         </div>
                         <p class="content_tit">SHIFT Web</p>
                     </div>
-                    
+                    <!-- jeje -->
+                    <div class="popup_wrap">
+                        <div class="popup">
+                            <i onclick="pop_close();">
+                                <span></span>
+                                <span></span>
+                            </i>
+                            <div class="pop_scroll">
+                                <div class="pop_content">
+                                    <p class="pop_tit">JEJECoMMS Co.</p>
+                                    <a href="http://www.jejecomms.com/" target="_blank">http://www.jejecomms.com/</a>
+                                    <table class="pop_index">
+                                        <colgroup>
+                                            <col width="100px">
+                                            <col>
+                                        </colgroup>
+                                            <tr>
+                                                <th>구분</th>
+                                                <td>유지보수 / 반응형 웹페이지</td>
+                                            </tr>
+                                            <tr>
+                                                <th>참여도</th>
+                                                <td>퍼블리싱</td>
+                                            </tr>
+                                            <tr>
+                                                <th>기간</th>
+                                                <td>2019. 07. 23 ~ 2020. 01. 31</td>
+                                            </tr>
+                                    </table>
+                                    <ul class="pop_sub">
+                                        <li>- 자사 웹페이지 유지보수</li>
+                                        <li>- flexbox 레이아웃 적용</li>
+                                    </ul>
+                                    <div class="pop_img">
+                                        <img src="img/jeje.png" alt="제제컴즈_홈페이지">
+                                    </div>
+                                </div>
+                            </div>        
+                        </div>
+                    </div>
                     <div class="content" onclick="pop_open(this);">
                         <div class="item">
                             <img class="item_img" src="img/pf_web03.png" alt="(주)제제컴즈_Web페이지">
@@ -290,7 +395,46 @@
                         </div>
                         <p class="content_tit">JEJECoMMS Co.</p>
                     </div>
-                    
+                    <!-- one-real -->
+                    <div class="popup_wrap">
+                        <div class="popup">
+                            <i onclick="pop_close();">
+                                <span></span>
+                                <span></span>
+                            </i>
+                            <div class="pop_scroll">
+                                <div class="pop_content">
+                                    <p class="pop_tit">원공인중개사</p>
+                                    <a href="http://www.one-real.com/" target="_blank">http://www.one-real.com/</a>
+                                    <table class="pop_index">
+                                        <colgroup>
+                                            <col width="100px">
+                                            <col>
+                                        </colgroup>
+                                            <tr>
+                                                <th>구분</th>
+                                                <td>팀 프로젝트 / 반응형 웹페이지</td>
+                                            </tr>
+                                            <tr>
+                                                <th>참여도</th>
+                                                <td>퍼블리싱 / UI 디자인 50% (메인페이지, 상세페이지)</td>
+                                            </tr>
+                                            <tr>
+                                                <th>기간</th>
+                                                <td>약 2주</td>
+                                            </tr>
+                                    </table>
+                                    <ul class="pop_sub">
+                                        <li>- 웹콘텐츠디자인 과정 팀 프로젝트에서 퍼블리싱 및 디자인 역할로 제작한 홈페이지</li>
+                                        <li>- 클라이언트의 요구와 타겟층의 연령대를 고려한 단순하고 직관적인 UI </li>
+                                    </ul>
+                                    <div class="pop_img">
+                                        <img src="img/one_real.png" alt="원공인중개사_홈페이지">
+                                    </div>
+                                </div>
+                            </div>        
+                        </div>
+                    </div>
                     <div class="content" onclick="pop_open(this);">
                         <div class="item">
                             <img class="item_img" src="img/pf_web04.png" alt="원공인중개사_Web페이지">
@@ -303,7 +447,46 @@
                         </div>
                         <p class="content_tit">원공인중개사</p>
                     </div>
-                    
+                    <!-- megabox -->
+                    <div class="popup_wrap">
+                        <div class="popup">
+                            <i onclick="pop_close();">
+                                <span></span>
+                                <span></span>
+                            </i>
+                            <div class="pop_scroll">
+                                <div class="pop_content">
+                                    <p class="pop_tit">메가박스</p>
+                                    <a href="http://www.one-real.com/" target="_blank">까먹지 말고 바꾸자</a>
+                                    <table class="pop_index">
+                                        <colgroup>
+                                            <col width="100px">
+                                            <col>
+                                        </colgroup>
+                                            <tr>
+                                                <th>구분</th>
+                                                <td>개인 포트폴리오 / 반응형 웹페이지</td>
+                                            </tr>
+                                            <tr>
+                                                <th>참여도</th>
+                                                <td>퍼블리싱 100% (메인페이지)</td>
+                                            </tr>
+                                            <tr>
+                                                <th>기간</th>
+                                                <td>약 10일</td>
+                                            </tr>
+                                    </table>
+                                    <ul class="pop_sub">
+                                        <li>- 메가박스 카피페이지</li>
+                                        <li>- 웹 표준 준수한 반응형 페이지</li>
+                                    </ul>
+                                    <div class="pop_img">
+                                        <img src="img/megabox.png" alt="메가박스_홈페이지">
+                                    </div>
+                                </div>
+                            </div>        
+                        </div>
+                    </div>
                     <div class="content" onclick="pop_open(this);">
                         <div class="item">
                             <img class="item_img" src="img/pf_web05.png" alt="메가박스_Web페이지">
@@ -316,7 +499,45 @@
                         </div>
                         <p class="content_tit">메가박스</p>
                     </div>
-                   
+                    <!-- gabia -->
+                    <div class="popup_wrap">
+                        <div class="popup">
+                            <i onclick="pop_close();">
+                                <span></span>
+                                <span></span>
+                            </i>
+                            <div class="pop_scroll">
+                                <div class="pop_content">
+                                    <p class="pop_tit">가비아</p>
+                                    <a href="http://www.one-real.com/" target="_blank">까먹지 말고 바꾸자</a>
+                                    <table class="pop_index">
+                                        <colgroup>
+                                            <col width="100px">
+                                            <col>
+                                        </colgroup>
+                                            <tr>
+                                                <th>구분</th>
+                                                <td>개인 포트폴리오 / 표준 웹페이지</td>
+                                            </tr>
+                                            <tr>
+                                                <th>참여도</th>
+                                                <td>퍼블리싱 100% (메인페이지)</td>
+                                            </tr>
+                                            <tr>
+                                                <th>기간</th>
+                                                <td>약 10일</td>
+                                            </tr>
+                                    </table>
+                                    <ul class="pop_sub">
+                                        <li>- 가비아 카피페이지</li>
+                                    </ul>
+                                    <div class="pop_img">
+                                        <img src="img/gabia.png" alt="가비아_홈페이지">
+                                    </div>
+                                </div>
+                            </div>        
+                        </div>
+                    </div>
                     <div class="content" onclick="pop_open(this);">
                         <div class="item">
                             <img class="item_img" src="img/pf_web06.png" alt="가비아_Web페이지">
@@ -345,6 +566,9 @@
                 </div>
             </div>
          </section>
+
+         <!-- section_contact ---------- -->
+
          <section id="contact">
             <div class="contact_wrap clearfix">
                 <div class="map_wrap">
@@ -353,7 +577,7 @@
                     var mapContainer = document.getElementById('map'), // 지도를 표시할 div
                     mapOption = {
                         center: new daum.maps.LatLng(37.2396185, 127.1676664), // 지도의 중심좌표
-                        level: 2 // 지도의 확대 레벨
+                        level: 3 // 지도의 확대 레벨
                     };
 
                     var map = new daum.maps.Map(mapContainer, mapOption);
@@ -368,51 +592,133 @@
 
                     // 마커가 지도 위에 표시되도록 설정합니다
                     marker.setMap(map);
-
-                    var iwContent =
-                    '<div style="padding:5px; font-size:15px; color: #000;">용인행정타운두산위브2단지<br><a href="http://map.daum.net/link/map/용인행정타운두산위브2단지,37.2396185, 127.1676664" style="color:blue; font-size:15px;" target="_blank">큰지도보기</a> <a href="http://map.daum.net/link/to/용인행정타운두산위브2단지,37.2396185, 127.1676664" style="color:blue; font-size:15px;" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-                    iwPosition = new daum.maps.LatLng(37.2396185, 127.1676664); //인포윈도우 표시 위치입니다                    
-
-                    // 인포윈도우를 생성합니다
-                    var infowindow = new daum.maps.InfoWindow({
-                        position: iwPosition,
-                        content: iwContent
-                    });
-
-                    // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
-                    infowindow.open(map, marker);
                     </script>
                 </div>
-                <div class="guage_wrap">
-                    <h2>Skill</h2>
+                <div class="info_wrap">
+                    <h2>Contact</h2>
                     <div class="line"></div>
-                    <h3>"UI/UX에 대한 이해를 바탕으로 디자인하고,<br>웹 표준/접근성에 맞는 마크업을 통해 반응형 웹페이지를 제작합니다."</h3>
+                    <h3>"문의사항이 있으시면 언제든 연락 주세요."</h3>
+                    <table class="info">
+                        <colgroup>
+                            <col width="50px">
+                            <col>
+                        </colgroup>
+                            <tr>
+                                <th><i class="fas fa-map-marker-alt"></i></th>
+                                <td>YongIn , &nbsp;KOREA</td>
+                            </tr>
+                            <tr>
+                                <th><i class="fas fa-mobile-alt"></th>
+                                <td>Tel .<span class="info_detail">+82 10 6OOO 0OOO</span></td>
+                            </tr>
+                            <tr>
+                                <th><i class="fas fa-envelope"></th>
+                                <td>Email .<span class="info_detail">junhp1994@gmail.com</span></td>
+                            </tr>
+                    </table>
+                    <form class="gform" method="POST" data-email="junhp1994@gmail.com"action="https://script.google.com/macros/s/AKfycbz2Gva0TtJFMYUX5DkqLcbhdvU19pAbK1GNKP3s/exec">
+                        <fieldset>
+                            <div class="form_contact">
+                                <label class="sr-only">Keep this field blank</label>
+                            <input id="honeypot" type="text" name="honeypot" value="" />
+                                <div class="field_box">
+                                    <input id="name"
+                                    class="field" name="name" placeholder="Name">
+                                </div>
+                                <div class="field_box">
+                                    <input id="phone" class="field" name="phone" type="text" value="" required placeholder="Phone">
+                                </div>
+                                <div class="field_box">
+                                    <input id="email" class="field" name="email" type="email" value="" required placeholder="Email">
+                                </div>
+                                <div class="field_box">
+                                    <textarea id="msg" class="field field_txt" name="message" rows="5" placeholder="Comment"></textarea>
+                                </div>
+                                <button class="button-success pure-button button-xlarge send">
+                                Send Message</button>
+                            </div>
+                        </fieldset>
+            
+                        <!-- <div class="thankyou_message">
+                            <div class="msg_popup_wrap">
+                                <div class="msg_popup">
+                                    <h1>Thank You!</h1>
+                                    <p>연락해 주셔서 감사합니다.</p>
+                                    <p>메시지 확인 후 답변 드리겠습니다.</p>
+                                    <button class="send" onclick="msg_close();">
+                                        Close</button>
+                                </div>
+                            </div>  
+                        </div> -->
+
+                        <div class="thankyou_message" style="">
+                            <div class="msg_popup_wrap">
+                                <div class="msg_popup">
+                                    <h1>Thank You!</h1>
+                                    <p>연락해 주셔서 감사합니다.</p>
+                                    <p>메시지 확인 후 답변 드리겠습니다.</p>
+                                </div> 
+                            </div>
+                        </div>
+                        </form>
                 </div>
             </div>
          </section>
 
+         <!-- top_btn ---------- -->
+
+         <a id="top_btn" href="#"><i class="fas fa-chevron-up"></i></a>
+
+         <!-- footer ---------- -->
+
+         <footer id="footer" class="footer">
+            <p>Copyright 2020 . JunHyung Park. All right reserve.</p>
+            <p>본 사이트는 상업적 목적이 아닌 개인 포트폴리오 용도로 제작되었습니다.</p>
+         </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script data-cfasync="false" src="js/form-submission-handler.js"></script>
+    <!-- <script data-cfasync="false" type="text/javascript"
+src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script> -->
     <script>
         $(document).ready(function(){
+            //메뉴 해당섹션
             $(".gnb ul li a").click(function(e){
                 e.preventDefault();
                 $(this).addClass("active").parent().siblings().children("a").removeClass("active");
             });
+            //탭메뉴
             $(".portfolio_tab a").click(function(e){
                 e.preventDefault();
                 $(this).addClass("current").siblings().removeClass("current");
             });
+            //드롭다운
+            $(".menu_trigger").click(function(e){
+                e.preventDefault();
+                $(this).toggleClass('active').siblings();
+                $(".menu_drop").slideToggle(200);
+            });
+            //드롭다운_메뉴_클릭 시, 슬라이드업
+            $(".menu_drop li a").click(function(e){
+                e.preventDefault();
+                $(".menu_drop").slideToggle(200);
+                $(".menu_trigger").toggleClass('active').siblings();
+            });
 
-            $(window).on('scroll', function() {
-                console.log($('#skill').offset().top);
-                console.log($('#about').offset().bottom);
-                console.log($(window).scrollTop());
-                
-                    // if($('#skill').offset().top < $(window).scrollTop()) {
-                    //     alert("도착했습니다.");
-                    // }
-                
+
+            //top_btn 스크롤 값에 따른 fade in/out
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 500) {
+                    $("#top_btn").fadeIn();
+                } else {
+                    $("#top_btn").fadeOut();
+                }                       
+            });
+
+                $("#top_btn").click(function() {
+                $('html, body').animate({
+                    scrollTop : 0}, 400);
+                return false;
             });
         });
         
@@ -433,6 +739,11 @@
             $(".popup_wrap").fadeOut();
             $("body").css("overflow-Y","auto");
         }
+
+        // function msg_close () {
+        //     $(".thankyou_message").css("display","none");
+        //     // $("body").css("overflow-Y","auto");
+        // }
 
     </script>
 </body>

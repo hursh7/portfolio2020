@@ -74,7 +74,15 @@ h3{text-align: center; font-size: 16px;margin-bottom: 90px;color:#a3a1a1; }
     height: 2px;
 }
 /* 버튼 초기화 */
-button {border: 0;}
+button,fieldset,input {border: 0;}
+textarea {resize: none; border: none; overflow-x:hidden;overflow-y: auto;}
+
+input::placeholder, textarea::placeholder {
+    color: #7f7f7f; 
+    font-size: 14px;   
+}
+
+#honeypot {display: none;}
 
 /* 반응형 */
 img {width: 100%;}
