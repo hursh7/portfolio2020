@@ -178,9 +178,9 @@
             <h3>"저의 프로젝트 및 포트폴리오 작품들을 소개합니다."</h3>
             <div class="portfolio_wrap clearfix">
                 <div class="portfolio_tab">
-                    <a href="#" class="current">All</a>
-                    <a href="#">Project</a>
-                    <a href="#">Portfolio</a>
+                    <a href="#" class="current all">All</a>
+                    <a href="#" class="project">Project</a>
+                    <a href="#" class="portfolio">Portfolio</a>
                 </div>
                 <div class="content_container clearfix">
                     <!-- zetton -->
@@ -223,7 +223,7 @@
                             </div>        
                         </div>
                     </div>
-                    <div class="content" onclick="pop_open(this);">
+                    <div class="content tab02" onclick="pop_open(this);">
                         <div class="item">
                             <img class="item_img" src="img/pf_web01.png" alt="제튼">
                             <div class="item_cover">
@@ -278,7 +278,7 @@
                             </div>        
                         </div>
                     </div>
-                    <div class="content" onclick="pop_open(this);">
+                    <div class="content tab02" onclick="pop_open(this);">
                         <div class="item">
                             <img class="item_img" src="img/pf_mob01.png" alt="모바일명함_SHIFT_App ">
                             <div class="item_cover">
@@ -331,7 +331,7 @@
                             </div>        
                         </div>
                     </div>
-                    <div class="content" onclick="pop_open(this);">
+                    <div class="content tab02" onclick="pop_open(this);">
                         <div class="item">
                             <img class="item_img" src="img/pf_web02.png" alt="SHIFT_Web페이지">
                             <div class="item_cover">
@@ -383,7 +383,7 @@
                             </div>        
                         </div>
                     </div>
-                    <div class="content" onclick="pop_open(this);">
+                    <div class="content tab02" onclick="pop_open(this);">
                         <div class="item">
                             <img class="item_img" src="img/pf_web03.png" alt="(주)제제컴즈_Web페이지">
                             <div class="item_cover">
@@ -435,7 +435,7 @@
                             </div>        
                         </div>
                     </div>
-                    <div class="content" onclick="pop_open(this);">
+                    <div class="content tab02" onclick="pop_open(this);">
                         <div class="item">
                             <img class="item_img" src="img/pf_web04.png" alt="원공인중개사_Web페이지">
                             <div class="item_cover">
@@ -487,7 +487,7 @@
                             </div>        
                         </div>
                     </div>
-                    <div class="content" onclick="pop_open(this);">
+                    <div class="content tab03" onclick="pop_open(this);">
                         <div class="item">
                             <img class="item_img" src="img/pf_web05.png" alt="메가박스_Web페이지">
                             <div class="item_cover">
@@ -538,7 +538,7 @@
                             </div>        
                         </div>
                     </div>
-                    <div class="content" onclick="pop_open(this);">
+                    <div class="content tab03" onclick="pop_open(this);">
                         <div class="item">
                             <img class="item_img" src="img/pf_web06.png" alt="가비아_Web페이지">
                             <div class="item_cover">
@@ -551,7 +551,7 @@
                         <p class="content_tit">가비아</p>
                     </div>
                     
-                    <div class="content" onclick="pop_open(this);">
+                    <div class="content tab03" onclick="pop_open(this);">
                         <div class="item">
                             <img class="item_img" src="img/pf_web05.png" alt="이미지">
                             <div class="item_cover">
@@ -678,8 +678,6 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script data-cfasync="false" src="js/form-submission-handler.js"></script>
-    <!-- <script data-cfasync="false" type="text/javascript"
-src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script> -->
     <script>
         $(document).ready(function(){
             //메뉴 해당섹션
@@ -692,6 +690,23 @@ src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-
                 e.preventDefault();
                 $(this).addClass("current").siblings().removeClass("current");
             });
+            //탭메뉴_분류
+            $(".project").click(function(e){
+                e.preventDefault();
+                $(".tab02").fadeIn();
+                $(".tab03").fadeOut();  
+            });
+            $(".portfolio").click(function(e){
+                e.preventDefault();
+                $(".tab03").fadeIn();
+                $(".tab02").fadeOut();  
+            });
+            $(".all").click(function(e){
+                e.preventDefault();
+                $(".tab03").fadeIn();
+                $(".tab02").fadeIn();  
+            });
+
             //드롭다운
             $(".menu_trigger").click(function(e){
                 e.preventDefault();
@@ -703,9 +718,7 @@ src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-
                 e.preventDefault();
                 $(".menu_drop").slideToggle(200);
                 $(".menu_trigger").toggleClass('active').siblings();
-            });
-
-
+            }); 
             //top_btn 스크롤 값에 따른 fade in/out
             $(window).scroll(function() {
                 if ($(this).scrollTop() > 500) {
@@ -722,6 +735,43 @@ src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-
             });
         });
         
+        //타이핑 이벤트
+        $(window).on('scroll', function() {
+            if($('.gnb ul li a[href="#home"]').hasClass("active")) {
+                $('#home .main_text .typing_text').css('animation', 'typing 3.5s steps(40, end), blink-caret .75s step-end infinite');
+            } else {
+                $('#home .main_text .typing_text').css('animation', 'none');
+            }
+            return false;
+        });
+
+        //스크롤 메뉴 색상 변경
+        $(window).on('scroll', function() {
+                $("section").each(function() {
+                    if($(window).scrollTop() >= $(this).offset().top) {
+                        var id = $(this).attr('id');
+                        $('.gnb ul li a').removeClass('active');
+                        $('.gnb ul li a[href="#'+id+'"]').addClass('active');
+                    }
+                });
+            });
+
+            //스킬 게이지 이벤트
+            $(window).on('scroll', function() {
+                if($('.gnb ul li a[href="#skill"]').hasClass("active")) {
+                    var i;
+                    var guage = "#skill .skill_wrap .guage_wrap .guage_bg .gg0";
+
+                    for (i = 1; i < 6; i++) {
+                        $(guage + i).css({'animation-name': 'mymove0'+i, 'animation-duration': '3s'});
+                    }
+                    return false;
+                } else {
+                    $('#skill .skill_wrap .guage_wrap .guage_bg .guage').css('animation', 'none');
+                }
+                return false;
+            });
+
         // 헤더 페이지 이동 
         function movePage (pageName) {
             var position = $(pageName).offset(); // 해당 태그의 좌표값을 구한다.

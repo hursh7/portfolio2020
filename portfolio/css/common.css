@@ -80,6 +80,7 @@ textarea {resize: none; border: none; overflow-x:hidden;overflow-y: auto;}
 input::placeholder, textarea::placeholder {
     color: #7f7f7f; 
     font-size: 14px;   
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 #honeypot {display: none;}
