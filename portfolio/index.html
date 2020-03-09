@@ -16,7 +16,7 @@
     crossorigin="anonymous">
     <link rel="shortcut icon" href="img/favicon.ico">
     <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=653072818d0b69f14dba3e57f1835677"></script>
-    <script src="js/jquery-3.4.1.min.js"></script>
+    <script data-cfasync="false" src="js/form-submission-handler.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -661,11 +661,10 @@
                                 <td>Email .<span class="info_detail">junhp1994@gmail.com</span></td>
                             </tr>
                     </table>
-                    <form class="gform" method="POST" data-email="junhp1994@gmail.com"action="https://script.google.com/macros/s/AKfycbz2Gva0TtJFMYUX5DkqLcbhdvU19pAbK1GNKP3s/exec">
+                    <form class="gform" method="POST" data-email="junhp1994@gmail.com" action="https://script.google.com/macros/s/AKfycbz2Gva0TtJFMYUX5DkqLcbhdvU19pAbK1GNKP3s/exec">
                         <fieldset>
                             <div class="form_contact">
                                 <label class="sr-only">Keep this field blank</label>
-                            <input id="honeypot" type="text" name="honeypot" value="" />
                                 <div class="field_box">
                                     <input id="name"
                                     class="field" name="name" placeholder="Name">
@@ -709,8 +708,7 @@
             <p>본 사이트는 상업적 목적이 아닌 개인 포트폴리오 용도로 제작되었습니다.</p>
          </footer>
     </div>
+    <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script data-cfasync="false" src="js/form-submission-handler.js"></script>
 </body>
 </html>
